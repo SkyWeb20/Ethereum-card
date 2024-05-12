@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #0d192c;
+    color: #8bacda;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background-color: #15263f;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.equilibrium-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.3s ease;
+}
+
+.view-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .equilibrium-img {
+    filter: brightness(0.5) blur(2px);
+    cursor: pointer;
+}
+
+.image-container:hover .view-icon {
+    opacity: 1;
+}
+
+.image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: hsl(178, 100%, 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover::after {
+    opacity: 0.5;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 20px 0;
+}
+
+.equilibrium:hover {
+    color: #20f0fc;
+}
+
+.equilibrium {
+    text-decoration: none;
+    color: #d9dfe9;
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.price {
+    color: #00fff7;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.time-left {
+    font-size: 20px;
+    color: #8bacda;
+}
+
+hr {
+    color: #2f4159;
+}
+
+.creator {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.jules {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #e2e4e6;
+}
+
+.jules:hover {
+    color: #1ef8f6;
+}
+
+.creator img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
